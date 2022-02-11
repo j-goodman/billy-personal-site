@@ -37,7 +37,7 @@ li {
 }
 
 .title {
-    font-family: 'Calistoga', serif;
+    /* font-family: 'Fraunces', serif; */
     font-size: 2em;
     font-variant: small-caps;
 }
@@ -61,14 +61,14 @@ li {
 }
 
 .cover-photo {
-    height: 1300px;
+    height: 800px;
     object-fit: cover;
 }
 
 .page {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 58px;
     width: 100%;
 }
 
@@ -81,13 +81,35 @@ li {
     margin-right: 100px;
 }
 
-.wrap-list {
+.option-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.option-tab {
+    cursor: pointer;
+    margin: 15px;
+}
+
+.option-tab:hover {
+    color: #888;
+}
+
+.wrap-list, .left-align-list {
     flex-wrap: wrap;
     justify-content: center;
 }
 
+.left-align-list {
+    justify-content: left;
+}
+
 .page-title {
-    margin-left: 110px;
+    margin-left: 20px;
+    text-align: center;
 }
 
 .page-image, .page-description {
@@ -96,8 +118,46 @@ li {
 }
 
 .page-description {
+    color: #888;
+    line-height: 30px;
     font-size: 1.25em;
     padding: 20px 50px 20px 50px;
+}
+
+.float-box {
+    align-self: flex-end;
+    background: #fff;
+    opacity: 1;
+    position: fixed;
+    top: 60%;
+    transition: 1s;
+}
+
+.invisible {
+    opacity: 0;
+    top: 70%;
+}
+
+.homepage-blurb {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.button-tray {
+    display: flex;
+    flex-direction: row;
+}
+
+.clickable {
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 5px 15px 5px 15px;
+}
+
+.clickable:hover {
+    opacity: .6;
 }
 
 .content-item {
@@ -119,6 +179,14 @@ li {
     font-size: 1.25em;
 }
 
+.item-detail {
+    align-self: flex-start;
+    color: #888;
+    font-size: .85em;
+    font-style: italic;
+    margin-top: 10px;
+}
+
 .page-content-list {
     align-items: left;
     flex-direction: column;
@@ -128,12 +196,22 @@ li {
     padding: 10px;
 }
 
-.content-list-item > a {
+.content-list-item-title {
     font-size: 1.25em;
 }
 
 .content-list-item > div {
     color: #888;
-    font-size: 1em;
-    max-width: 50%;
+}
+
+.social-link {
+    opacity: 0.6;
+}
+
+.social-link:hover {
+    opacity: 0.3;
+}
+
+.nondisplay {
+    display: none;
 }
