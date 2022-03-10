@@ -20,6 +20,10 @@ li {
     list-style: none;
 }
 
+img {
+    object-fit: cover;
+}
+
 .header-bar, .page-list {
     display: flex;
     flex-direction: row;
@@ -48,7 +52,39 @@ li {
 
 .page-list {
     list-style: none;
+    align-items: center;
     margin: 0 20px 0 0;
+}
+
+.mobile-page-list, .mobile-list-expander {
+    display: none;
+}
+
+@media screen and (max-width: 940px) {
+    .page-list {
+        display: none;
+    }
+
+    .mobile-list-expander {
+        cursor: pointer;
+        padding: 20px 30px 20px 30px;
+        display: flex;
+    }
+
+    .mobile-page-list {
+        list-style: none;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        padding: 0 20px 0 0;
+        right: 0;
+        top: 45px;
+    }
+
+    .closed {
+        display: none;
+    }
 }
 
 .page-list-item {
@@ -82,16 +118,24 @@ li {
 }
 
 .option-tabs {
+    border-bottom: 2px solid #ced;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-left: 100px;
     margin-right: 100px;
+    margin-top: 5px;
 }
 
 .option-tab {
     cursor: pointer;
-    margin: 15px;
+    padding: 15px;
+    transition: .2s;
+}
+
+.selected-tab {
+    background: #ced;
+    color: #888;
 }
 
 .option-tab:hover {
@@ -103,12 +147,28 @@ li {
     justify-content: center;
 }
 
+.category-header {
+    font-size: 1.5em;
+    padding: 15px;
+    text-align: center;
+}
+
+.brand-logo > img {
+    max-width: 300px;
+    border: 3px solid green;
+}
+
+.brand-logo {
+    border: 3px solid blue;
+}
+
 .left-align-list {
     justify-content: left;
 }
 
 .page-title {
     margin-left: 20px;
+    margin-bottom: 5px;
     text-align: center;
 }
 
@@ -214,4 +274,25 @@ li {
 
 .nondisplay {
     display: none;
+}
+
+.scripts-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.scripts-image, .scripts-text {
+    width: 50%;
+}
+
+.scripts-text {
+    padding: 0 20px 0 20px;
+}
+
+.awards-and-press-list > .content-list-item > .content-list-item-title {
+    color: #000;
+}
+
+.awards-and-press-list > .content-list-item > div {
+    padding: 5px;
 }
