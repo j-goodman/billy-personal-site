@@ -125,14 +125,16 @@ let setupArtsJournalismSection = (organizeBy) => {
             })
         })
     } else {
-        // Object.keys(outletLogos).forEach(outlet => {
-        //     let element = document.createElement('a')
-        //     element.href = 'about:blank'
-        //     element.className = 'brand-logo'
-        //     let image = document.createElement('img')
-        //     element.appendChild(image)
-        //     image.src = `images/brand_logos/${outletLogos[outlet]}`
-        //     section.appendChild(element)
-        // })
+        Object.keys(outletLogos).forEach(outlet => {
+            let element = document.createElement('a')
+            element.href = outletFeaturedArticles[outlet]
+            element.target = "_blank"
+            element.className = 'brand-logo'
+            let image = document.createElement('img')
+            element.appendChild(image)
+            image.src = `images/brand_logos/${outletLogos[outlet]}`
+            section.appendChild(element)
+            console.log(section)
+        })
     }
 }

@@ -153,13 +153,16 @@ img {
     text-align: center;
 }
 
-.brand-logo > img {
-    max-width: 300px;
-    border: 3px solid green;
+.brand-logo {
+    height: 150px;
+    margin: 25px;
+    width: 350px;
 }
 
-.brand-logo {
-    border: 3px solid blue;
+.brand-logo > img {
+    height: 150px;
+    object-fit: contain;
+    width: 350px;
 }
 
 .left-align-list {
