@@ -111,6 +111,9 @@ let setupArtsJournalismSection = (organizeBy) => {
                 element.href = article.link
                 let image = document.createElement('img')
                 image.className = 'content-image'
+                if (article.imageAlign) {
+                    image.classList.add(`${article.imageAlign}-align-content-image`)
+                }
                 image.src = article.imageLink
                 element.appendChild(image)
                 let title = document.createElement('div')

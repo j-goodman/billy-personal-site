@@ -60,33 +60,6 @@ img {
     display: none;
 }
 
-@media screen and (max-width: 940px) {
-    .page-list {
-        display: none;
-    }
-
-    .mobile-list-expander {
-        cursor: pointer;
-        padding: 20px 30px 20px 30px;
-        display: flex;
-    }
-
-    .mobile-page-list {
-        list-style: none;
-        background: #fff;
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        padding: 0 20px 0 0;
-        right: 0;
-        top: 45px;
-    }
-
-    .closed {
-        display: none;
-    }
-}
-
 .page-list-item {
     cursor: pointer;
     padding: 20px;
@@ -161,6 +134,7 @@ img {
 
 .brand-logo > img {
     height: 150px;
+    max-width: 85%;
     object-fit: contain;
     width: 350px;
 }
@@ -234,7 +208,16 @@ img {
 .content-image {
     height: 300px;
     object-fit: cover;
+    object-position: center;
     width: 300px;
+}
+
+.left-align-content-image {
+    object-position: left;
+}
+
+.right-align-content-image {
+    object-position: right;
 }
 
 .item-title {
@@ -298,4 +281,107 @@ img {
 
 .awards-and-press-list > .content-list-item > div {
     padding: 5px;
+}
+
+@media screen and (max-width: 940px) {
+    .page-list {
+        display: none;
+    }
+
+    .mobile-list-expander {
+        cursor: pointer;
+        font-size: 2em;
+        padding: 20px 30px 20px 30px;
+        display: flex;
+    }
+
+    .mobile-page-list {
+        list-style: none;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5em;
+        position: fixed;
+        padding: 0 20px 0 0;
+        right: 0;
+        top: 60px;
+        width: 90%;
+        z-index: 1;
+    }
+
+    .closed {
+        display: none;
+    }
+
+    .header-bar {
+        border-bottom: 2px solid #ced;
+    }
+
+    .page {
+        margin-top: 85px;
+    }
+
+    .page-content-list {
+        padding: 0;
+    }
+
+    .page-content, .scripts-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page-content {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .page-description, .scripts-text {
+        padding: 0;
+    }
+
+    .category-header {
+        border-top: 2px solid #ced;
+    }
+
+    .scripts-text {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .page-image, .page-description, .scripts-image, .scripts-text {
+        width: 100%;
+    }
+
+    .option-tabs {
+        font-size: 1.35em;
+        justify-content: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+
+    .float-box {
+        align-self: center;
+        padding: 30px;
+        top: 20%;
+        transition: 1s;
+        width: 80%;
+    }
+
+    .social-link > img {
+        width: 100px;
+    }
+
+    .button-tray {
+        flex-direction: column;
+    }
+
+    .clickable {
+        font-size: 1.2em;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 25px 10px 25px 10px;
+        text-align: center;
+    }
 }
